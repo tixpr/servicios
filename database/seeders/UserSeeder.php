@@ -15,6 +15,7 @@ class UserSeeder extends Seeder
      */
     public function run(): void
     {
+        /*
         for ($i = 1; $i <=1000; $i++) {
             User::create([
                 'dni' =>  strval(10000000 + $i),
@@ -25,5 +26,7 @@ class UserSeeder extends Seeder
                 'email' => 'email' . $i . '@sistemas.edu.pe',
             ]);
         }
+        */
+        User::factory(2000)->create();
     }
 }
