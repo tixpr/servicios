@@ -27,6 +27,30 @@ class UserSeeder extends Seeder
             ]);
         }
         */
+        $admin = User::create([
+            'dni' =>  '10000000',
+            'paternal' => 'Administrador',
+            'maternal' => 'Servicios',
+            'names' => 'FISUNCP',
+            'password' => Hash::make('administrador'),
+            'email' => 'servicios@sistemasuncp.edu.pe',
+        ]);
         User::factory(2000)->create();
+        $admin->assignRole('administrador');
+        $users = User::all();
+        $roles = [
+            'administrador',
+            'estudiante pregrado',
+            'estudiante posgrado',
+            'docente pregrado',
+            'docente posgrado',
+            'egresado pregrado',
+            'egresado posgrado',
+            'administrativo',
+            'invitado'
+        ];
+        foreach ($users as $user) {
+            $user->assignRole($roles[random_int(1, 8)]);
+        }
     }
 }

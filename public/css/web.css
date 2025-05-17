@@ -1,0 +1,99 @@
+body {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    background-color: #f9f9f9;
+}
+input {
+    font: inherit;
+}
+#container {
+    width: 100%;
+    max-width: 1400px;
+    min-height: 100%;
+    margin: 0 auto;
+    background-color: #fff !important;
+}
+#base-header {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#title-header {
+    color: #fbcc3d;
+    font-size: 200%;
+}
+.div {
+    display: block;
+    width: 100%;
+    height: 20px;
+    background-color: #ffb607;
+}
+.btn {
+    display: inline-block;
+    background-color: #0093e7;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 10px;
+}
+#login-form {
+    position: relative;
+    display: grid;
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+}
+
+.form-inputs {
+    margin: 10px 0 30px 0;
+    display: grid;
+    gap: 1.5rem;
+}
+.form-label {
+    width: 100%;
+    display: grid;
+    grid-template-areas: "input";
+}
+.form-input {
+    display: block;
+    grid-area: input;
+    border-radius: 10px;
+    border: 2px solid #ffb607;
+    padding: 15px 20px;
+    font-size: 1.3rem;
+    color: #2a2622;
+}
+.form-input:focus + .form-text,
+.form-input:not(:placeholder-shown) + .form-text {
+    background-color: #fff;
+    transform: translateY(-50%) scale(0.7);
+}
+.form-text {
+    grid-area: input;
+    z-index: 100;
+    width: max-content;
+    height: 100%;
+    margin-left: 10px;
+    padding: 0 0.5rem;
+    display: flex;
+    font-size: 1.3rem;
+    align-items: center;
+    transform-origin: left center;
+    transition: transform 0.3s;
+}
+/*
+.submit {
+    padding: 15px 10px;
+    font-size: 1.3rem;
+    color: #fff;
+    background-color: #0093e7;
+    border: none;
+    cursor: pointer;
+}
+*/
